@@ -1,4 +1,4 @@
-# Minecraft Bodyguars (Mineflayer)
+# Minecraft Bodyguard (Mineflayer)
 The updated version for the Minecraft Bodyguard Bot using Mineflayer. It's not stable but it's working 90% with several bugs :)
 
 ## How to use
