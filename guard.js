@@ -140,18 +140,5 @@ bots.forEach((bot) => {
       bot.chat("I will no longer guard this area.");
       stopGuarding();
     }
-
-    // Follow and protect the player
-    if (message === "fnp") {
-      const player = bot.players[username];
-
-      if (!player) {
-        bot.chat("I can't see you.");
-        return;
-      }
-
-      bot.chat("I will follow and protect you.");
-      followAndProtect(player, bot);
-    }
   });
 });
