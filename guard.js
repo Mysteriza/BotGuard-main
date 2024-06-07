@@ -85,31 +85,31 @@ function noHostileEntitiesAround() {
   return true; // No hostile entities found around any bot
 }
 
-// Event listener untuk tick fisika
+// Event listener
 bots.forEach((bot) => {
   bot.on("physicsTick", () => {
-    if (!guardPos) return; // Tidak melakukan apa-apa jika bot tidak menjaga posisi tertentu
+    if (!guardPos) return; // Does nothing if the bot does not maintain a certain position
 
-    // Hanya mencari mob dalam jarak 15 blok
+    // Only search for hostile mobs within 15 blocks
     const filter = (e) =>
-      e.type === "hostile" && // Memeriksa apakah entity adalah hostile
-      e.position.distanceTo(bot.entity.position) < 5 && // Memeriksa apakah jaraknya kurang dari 15 blok
-      e.displayName !== "Armor Stand"; // Mengabaikan Armor Stand (Mojang mengklasifikasikan armor stand sebagai mob)
+      e.type === "hostile" && // Checks whether the entity is hostile
+      e.position.distanceTo(bot.entity.position) < 5 && // Checks if the distance is less than 15 blocks
+      e.displayName !== "Armor Stand"; // Ignores Armor Stands (Mojang classifies armor stand as mobs)
 
-    // Mendapatkan entity terdekat yang sesuai dengan filter
+    // Gets the closest entity that matches the filter
     const entity = bot.nearestEntity(filter);
     if (entity) {
-      // Memulai serangan
+      // Initiating an attack
       bot.pvp.attack(entity);
     } else {
-      // Jika tidak ada musuh, cek apakah semua bot sudah selesai membunuh musuh
+      // If there are no enemies, check whether all bots have finished killing enemies
       if (noHostileEntitiesAround()) {
-        // Kembali ke dekat pemain "Mysteriza"
+        // Back near the "Mysteriza" player, you can change this username to your username
         bots.forEach((bot) => {
           if (bot.players["Mysteriza"]) {
             bot.pathfinder.setMovements(new Movements(bot));
             bot.pathfinder.setGoal(
-              new goals.GoalFollow(bot.players["Mysteriza"].entity, 4), // Set a follow goal with a distance of 3 blocks
+              new goals.GoalFollow(bot.players["Mysteriza"].entity, 3), // Set a follow goal with a distance of 3 blocks
               true // Enable auto pathfinding
             );
           }
