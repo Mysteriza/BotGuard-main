@@ -1,6 +1,8 @@
 # Minecraft Bodyguard (Mineflayer)
 The updated version for the Minecraft Bodyguard Bot using Mineflayer. It's not stable but it's working 90% with several bugs :)
 
+Works on **1.20.1 Fabric** version. I don't know about other version.
+
 ## How to use
 Inside project directory:
 ```
