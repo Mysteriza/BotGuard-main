@@ -9,7 +9,7 @@ npm install mineflayer mineflayer-pathfinder mineflayer-pvp
 
 After installation, run:
 ```
-node guard.js <host> <port> [<bot name>] [<password>]"
+node guard.js <host> <port> [<bot name>] [<password>]
 ```
 For example:
 ```
