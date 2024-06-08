@@ -19,10 +19,10 @@ npm install mineflayer mineflayer-pathfinder mineflayer-pvp
 
 After installation, run:
 ```
-node guard.js <host> <port> [<bot name>] [<password>]
+node guard.js <host> <port> [<bot name>]
 ```
 For example:
 ```
 node guard.js localhost 51916 Guardian
 ```
-You don't have to put password if you run it on singleplayer. Just make sure to enable "Open to LAN" inside your world to get the port number.
+Just make sure to enable "Open to LAN" inside your world to get the port number.
