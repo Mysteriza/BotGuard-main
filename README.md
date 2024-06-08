@@ -11,6 +11,11 @@ Works on **1.20.1 Fabric** version. I don't know about other version. Probably n
 
 Make sure you enabled **allow cheats** to get diamond sword for the bot.
 
+## Bugs
+- Can't enter through door (it will destroy the door or any blocks)
+- Sometimes bot get disconnected
+- Sometimes bot can't teleport
+
 ## How to use
 Inside project directory:
 ```
